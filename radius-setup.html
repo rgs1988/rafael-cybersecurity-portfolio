@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RADIUS Setup | Rafael Guajardo</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+<div class="logo">Rafael Guajardo</div>
+
+<div class="nav-links">
+<a href="index.html">Inicio</a>
+<a href="sobre-mi.html">Sobre mí</a>
+<a href="proyectos.html">Proyectos</a>
+<a href="contacto.html">Contacto</a>
+</div>
+</nav>
+
+<section class="section">
+<div class="container">
+
+<span class="tag">RADIUS • FREERADIUS • ACTIVE DIRECTORY</span>
+
+<h1>RADIUS SETUP - AUTENTICACIÓN CENTRALIZADA</h1>
+
+<p>
+Este trabajo presenta la implementación de un entorno de autenticación centralizada utilizando FreeRADIUS integrado con Active Directory.
+</p>
+
+<p>
+A lo largo del laboratorio se configuró un servidor Linux capaz de comunicarse con el dominio, validar credenciales mediante winbind y utilizar ntlm_auth como puente hacia AD.
+</p>
+
+<p>
+El objetivo fue construir un flujo realista de autenticación empresarial, comprendiendo tanto la integración técnica como las diferencias entre métodos como PAP y MSCHAP, así como las limitaciones de las herramientas de prueba utilizadas.
+</p>
+
+<p>Máquinas utilizadas:</p>
+
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Sistema Operativo</th>
+<th>Nombre</th>
+<th>Cuenta</th>
+<th>Dominio</th>
+<th>IP</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Ubuntu Linux</td>
+<td>RADIUS Server</td>
+<td>Administrador</td>
+<td>YORHA</td>
+<td>192.168.1.86</td>
+</tr>
+
+<tr>
+<td>Windows Server 2025</td>
+<td>Controlador de Dominio</td>
+<td>Administrador</td>
+<td>YORHA</td>
+<td>192.168.1.89</td>
+</tr>
+
+<tr>
+<td>Windows 10</td>
+<td>Cliente</td>
+<td>Usuario</td>
+<td>YORHA</td>
+<td>192.168.1.88</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div style="margin-top:30px;">
+<a href="radius-control-de-acceso-a-la-red.pdf" download class="btn-primary">
+Descargar informe completo (PDF)
+</a>
+</div>
+
+</div>
+</section>
+
+<footer class="footer">
+<p>© 2026 Rafael Guajardo</p>
+</footer>
+
+</body>
+</html>

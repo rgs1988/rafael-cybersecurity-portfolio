@@ -1,0 +1,343 @@
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background: #000;
+    color: #eaeaea;
+    overflow-x: hidden;
+}
+
+/* =========================
+   REJILLA SOLO INDEX
+========================= */
+body.home::before {
+    content: "";
+    position: fixed;
+    inset: -30%;
+
+    background:
+        linear-gradient(rgba(255,255,255,0.15) 1.5px, transparent 1.5px),
+        linear-gradient(90deg, rgba(255,255,255,0.15) 1.5px, transparent 1.5px);
+
+    background-size: 50px 50px;
+
+    transform: perspective(1000px) rotateX(70deg) translateY(-180px);
+    animation: gridMove 6s linear infinite;
+
+    z-index: 0;
+    opacity: 0.9;
+}
+
+@keyframes gridMove {
+    0% {
+        transform: perspective(1000px) rotateX(70deg) translateY(-180px) translateX(0);
+    }
+    100% {
+        transform: perspective(1000px) rotateX(70deg) translateY(-180px) translateX(50px);
+    }
+}
+
+/* LUCES */
+body.home::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background:
+        radial-gradient(circle at top left, rgba(58,123,213,0.15), transparent 40%),
+        radial-gradient(circle at top right, rgba(255,255,255,0.06), transparent 40%),
+        radial-gradient(circle at bottom left, rgba(58,123,213,0.12), transparent 40%),
+        radial-gradient(circle at bottom right, rgba(255,255,255,0.05), transparent 40%),
+        radial-gradient(circle at center, transparent 0%, #000 75%);
+
+    z-index: 1;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 60px;
+}
+
+.logo {
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.nav-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #aaa;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #fff;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+}
+
+.hero-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 120px 40px;
+    text-align: center;
+}
+
+/* =========================
+   HEADER INTERNO
+========================= */
+.page-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 40px 40px;
+}
+
+/* =========================
+   TEXTOS
+========================= */
+.tag {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 2px;
+    padding: 8px 14px;
+    margin-bottom: 20px;
+
+    background: linear-gradient(90deg, #3a7bd5, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 999px;
+}
+
+h1 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #b5b5b5;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* =========================
+   SECCIONES
+========================= */
+.section {
+    position: relative;
+    z-index: 10;
+    padding: 80px 40px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* =========================
+   BOTONES
+========================= */
+.btn-primary,
+.btn-secondary {
+    display: inline-block;
+    padding: 12px 22px;
+    margin: 10px 10px 0 0;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #3a7bd5, #ffffff);
+    color: #000;
+}
+
+.btn-secondary {
+    border: 1px solid #444;
+    color: #ccc;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+    transform: translateY(-2px);
+}
+
+/* =========================
+   PROYECTOS
+========================= */
+.projects-section {
+    padding: 40px 60px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 30px;
+    border-radius: 14px;
+
+    transition: 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(58,123,213,0.5);
+}
+
+/* =========================
+   TABLAS
+========================= */
+.table-container {
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background: rgba(255,255,255,0.04);
+    color: #fff;
+}
+
+td {
+    color: #ccc;
+}
+
+/* =========================
+   SOBRE MI (ARREGLADO)
+========================= */
+.about-container {
+    position: relative;
+    z-index: 10;
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.about-image img {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+/* =========================
+   FORMULARIO CONTACTO
+========================= */
+.contact-form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.03);
+    color: #fff;
+    font-family: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: rgba(58,123,213,0.6);
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-size: 14px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image {
+        justify-content: center;
+    }
+
+    .navbar {
+        padding: 20px;
+    }
+
+    .projects-section {
+        padding: 40px 20px;
+    }
+}

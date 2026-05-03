@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Rafael Guajardo</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">Rafael Guajardo</div>
+
+    <div class="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="sobre-mi.html">Sobre mí</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="contacto.html">Contacto</a>
+    </div>
+</nav>
+
+<!-- CONTENIDO -->
+<section class="section">
+    <div class="container">
+
+        <span class="tag">CONTACT • CYBERSECURITY</span>
+
+        <h1>Contacto</h1>
+
+        <p>
+            Canal de contacto para consultas técnicas, colaboración y oportunidades profesionales en ciberseguridad
+            
+        </p>
+
+        <!-- FORMULARIO -->
+        <form action="https://formsubmit.co/rafael.egs1988@hotmail.com" method="POST" class="contact-form">
+
+            <!-- evitar captcha -->
+            <input type="hidden" name="_captcha" value="false">
+
+            <!-- redirección opcional -->
+            <input type="hidden" name="_next" value="gracias.html">
+
+            <input type="text" name="nombre" placeholder="Nombre" required>
+
+            <input type="email" name="email" placeholder="Correo electrónico" required>
+
+            <textarea name="mensaje" rows="6" placeholder="Escribe tu mensaje..." required></textarea>
+
+            <button type="submit" class="btn-primary">
+                Enviar mensaje
+            </button>
+
+        </form>
+
+    </div>
+</section>
+
+<footer class="footer">
+    <p>© 2026 Rafael Guajardo — Blue Team Portfolio</p>
+</footer>
+
+</body>
+</html>
