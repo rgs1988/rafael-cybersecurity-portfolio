@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Zeek Network Monitoring | Rafael Guajardo</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="logo">
+        Rafael Guajardo
+    </div>
+
+    <div class="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="sobre-mi.html">Sobre mí</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="contacto.html">Contacto</a>
+    </div>
+
+</nav>
+
+<section class="section">
+
+<div class="container">
+
+<span class="tag">
+    ZEEK • NSM • NETWORK MONITORING
+</span>
+
+<h1>ZEEK NETWORK MONITORING</h1>
+
+<p>
+Esta guía documenta la implementación y uso de Zeek como plataforma de monitoreo y análisis
+de tráfico de red orientada a ciberseguridad.
+</p>
+
+<p>
+El laboratorio fue desarrollado en un entorno Linux Ubuntu, donde se configuró Zeek como
+sensor de red para capturar telemetría en tiempo real y generar registros estructurados
+de protocolos como DNS, HTTP y conexiones TCP/UDP.
+</p>
+
+<p>
+A lo largo de la guía se realizan ejercicios prácticos de análisis de tráfico, detección
+de anomalías y simulación de comportamientos sospechosos, incluyendo escaneo de puertos
+y DNS Beaconing, permitiendo comprender cómo Zeek puede utilizarse en entornos Blue Team
+y SOC para actividades de monitoreo, Threat Hunting y detección de amenazas.
+</p>
+
+<p>
+Además, se integra Zeek con Splunk Enterprise mediante Splunk Universal Forwarder,
+centralizando la telemetría para correlación y análisis avanzado de eventos de seguridad.
+El objetivo principal es demostrar cómo construir un laboratorio funcional de
+Network Security Monitoring (NSM) capaz de generar visibilidad sobre el comportamiento
+de la red y apoyar procesos de detección e investigación.
+</p>
+
+<h2 style="margin-top:50px;">
+Infraestructura del laboratorio
+</h2>
+
+<div class="table-container">
+
+<table>
+
+<thead>
+<tr>
+    <th>Equipo</th>
+    <th>Sistema Operativo</th>
+    <th>Función</th>
+    <th>IP</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+    <td>Ubuntu Server</td>
+    <td>Ubuntu Linux</td>
+    <td>Sensor Zeek + Splunk Forwarder</td>
+    <td>192.168.1.99</td>
+</tr>
+
+<tr>
+    <td>Host Fguajardo</td>
+    <td>Windows 10</td>
+    <td>Generación de tráfico y pruebas</td>
+    <td>192.168.1.88</td>
+</tr>
+
+<tr>
+    <td>Servidor Splunk</td>
+    <td>Windows Server</td>
+    <td>Recepción y análisis de telemetría</td>
+    <td>192.168.1.89</td>
+</tr>
+
+<tr>
+    <td>Equipo objetivo</td>
+    <td>Ubuntu/Linux</td>
+    <td>Simulación de escaneo y anomalías</td>
+    <td>192.168.1.85</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<h2 style="margin-top:50px;">
+Tecnologías utilizadas
+</h2>
+
+<ul class="tech-list">
+
+    <li>Zeek NSM</li>
+    <li>Splunk Enterprise</li>
+    <li>Splunk Universal Forwarder</li>
+    <li>Ubuntu Server</li>
+    <li>Windows 10</li>
+    <li>NMAP</li>
+    <li>TCPDump</li>
+    <li>DNS / HTTP / TCP Analysis</li>
+
+</ul>
+
+<div style="margin-top:40px;">
+
+<a href="guia-zeek.pdf" download class="btn-primary">
+    Descargar informe completo (PDF)
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer class="footer">
+    <p>© 2026 Rafael Guajardo — Blue Team Portfolio</p>
+</footer>
+
+</body>
+</html>
